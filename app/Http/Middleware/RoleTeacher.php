@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
-class Role
+class RoleTeacher
 {
     /**
      * Handle an incoming request.
@@ -18,16 +18,10 @@ class Role
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::user()->role == User::STUDENT){
-            return redirect()->route('student.home');
+        if(!Auth::user()->role == User::TEACHER)
+        {
+            return $next($request);
         }
-        elseif(Auth::user()->role == User::TEACHER){
-            return redirect()->route('teacher.home');
-        }
-        else {
-            return redirect('/home');
-        }
-
-        return $next($request);
+        abort(401);
     }
 }

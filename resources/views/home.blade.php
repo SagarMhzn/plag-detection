@@ -15,7 +15,7 @@
                     @endif
 
                     {{ __('View your pending Assignments!') }}
-                    <a href="{{ route('pending_assignments') }}"></a>
+                    <a href="{{ route('pending_assignments') }}">View pending Assignments</a>
                     
                 </div>
             

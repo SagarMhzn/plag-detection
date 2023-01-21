@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AssignmentController;
+use App\Http\Controllers\StudentController;
+use App\Http\Controllers\TeacherController;
+
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +24,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/checkrole')->middleware('role')->name('checkrole');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/pending')
+
+
+Route::get('/student-home', [StudentController::class, 'index'])->name('student.home');
+Route::get('/teacher-home', [TeacherController::class, 'index'])->middleware('teacher-role')->name('teacher.home');
+
+Route::get('/pending', [AssignmentController::class, 'PendingAssignments'])->name('pending_assignments');
