@@ -38,10 +38,10 @@
                     
                         <ul class="navbar-nav">
                           <li class="nav-item active">
-                            <a class="nav-link" href="#">Dashboard </a>
+                            <a class="nav-link" href="{{ route('home') }}">Dashboard </a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Members</a>
+                            <a class="nav-link" href="{{ route('studentlist') }}">Members</a>
                           </li>
                           
                         </ul>

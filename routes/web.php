@@ -34,4 +34,4 @@ Route::get('/teacher-home', [TeacherController::class, 'index'])->middleware('te
 
 Route::get('/pending', [AssignmentController::class, 'PendingAssignments'])->name('pending_assignments');
 
-Route::get('/list',[MemberController::class,'display']);
+Route::get('/list',[MemberController::class,'display'])->name('studentlist');
