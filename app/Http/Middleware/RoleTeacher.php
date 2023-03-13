@@ -18,7 +18,7 @@ class RoleTeacher
      */
     public function handle(Request $request, Closure $next)
     {
-        if(!Auth::user()->role == User::TEACHER)
+        if(Auth::user()->role == User::TEACHER)
         {
             return $next($request);
         }
