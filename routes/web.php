@@ -5,6 +5,7 @@ use App\Http\Controllers\AssignmentController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\UploadFileController;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -35,3 +36,12 @@ Route::get('/teacher-home', [TeacherController::class, 'index'])->middleware('te
 Route::get('/pending', [AssignmentController::class, 'PendingAssignments'])->name('pending_assignments');
 
 Route::get('/list',[MemberController::class,'display'])->name('studentlist');
+
+//Route::get('file-upload', [ FileUploadController::class, 'getFileUploadForm' ])->name('get.fileupload');
+//Route::post('file-upload', [ FileUploadController::class, 'store' ])->name('store.file');
+//Route::get('upload-file', [ FileUploadController::class, 'show' ])->name('show.file');
+
+Route::get('file-upload', [ UploadFileController::class, 'getFileUploadForm' ])->name('get.fileupload');
+Route::post('file-upload', [ UploadFileController::class, 'store' ])->name('store.file');
+Route::get('upload-file', [ UploadFileController::class, 'show' ])->name('show.file');
+

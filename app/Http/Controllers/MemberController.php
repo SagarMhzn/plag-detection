@@ -10,7 +10,7 @@ class MemberController extends Controller
     //
     function display()
     {
-        $data = User::all();
+        $data = User::where("role",User::STUDENT)->get();
     
         return view('member',['studentlists' =>$data]);
     }
