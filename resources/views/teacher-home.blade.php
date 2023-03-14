@@ -6,6 +6,14 @@
         <div class="col-md-8">
 
 
+            @if(session('successMessage'))
+                <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
+                    {{ session('successMessage') }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
 
             <div class="card-body">
                 @if (session('status'))
@@ -27,7 +35,7 @@
                     <div class="view-assignments card-body card mr-5" style="width:30%; margin-right:30px;">
                         {{ __('View your pending Assignments!') }}
                         <br />
-                        <a href="{{ route('pending_assignments') }}">View pending Assignments</a>
+                        <a href="{{ route('teacher.pending_assignments') }}">View pending Assignments</a>
                     </div>
 
                     <div class="view-post-assignments">
@@ -47,27 +55,28 @@
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            <div class="input-group mb-3">
-                                                {{-- <span class="input-group-text" id="basic-addon2">Assignment Title</span> --}}
-                                                <label class="input-group-text" id="basic-addon2">Assignment Title</label>
-                                                <input type="text" class="form-control" placeholder="Assignment Title" aria-label="Recipient's username" aria-describedby="basic-addon2" />
-                                            </div>
-                                            <div class="input-sub_date mb-3">
-                                                <label for="birthday">Choose the Submission Date :-</label>
-                                                <input type="date" id="birthday" name="birthday" /> 
-                                            </div>
-
-                                            <div class="input-description">
-                                                <span class="input-group-text">Description</span>
-                                                <textarea class="form-control" aria-label="With textarea"></textarea>
-                                              </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="reset" class="btn btn-secondary" >
-                                                Reset
-                                            </button>
-                                            <button type="submit" class="btn btn-primary">Post</button>
-                                        </div>
+                                            <form action="{{ route('store.assignment') }}" method="post" enctype="multipart/form-data">
+                                                @csrf
+                                                    <div class="input-group mb-3">
+                                                        {{-- <span class="input-group-text" id="basic-addon2">Assignment Title</span> --}}
+                                                        <label class="input-group-text" id="basic-addon2">Assignment Title</label>
+                                                        <input required type="text" name="title" class="form-control" placeholder="Assignment Title" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                                                    </div>
+                                                    <div class="input-sub_date mb-3">
+                                                        <label for="submission_date">Choose the Submission Date :-</label>
+                                                        <input required type="date" name="submission_date" id="submission_date" name="birthday" class="form-control"/> 
+                                                    </div>
+        
+                                                    <div class="input-description">
+                                                        <span class="input-group-text">Description</span>
+                                                        <textarea required class="form-control" name="desc" aria-label="With textarea"></textarea>
+                                                    </div>
+                                                    <input type="hidden" name="teacher_id" value="{{ Auth::id() }}">
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-primary">Post</button>
+                                                </div>
+                                            </form>
                                     </div>
                                 </div>
                             </div>

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Doc;
 use App\Traits\UploadFileTrait;
+use Illuminate\Support\Facades\Auth;
 
 class UploadFileController extends Controller
 {
@@ -16,13 +17,16 @@ class UploadFileController extends Controller
     {
         $this->file_path = public_path('uploads/');
     }
-    public function getFileUploadForm()
+
+    public function getFileUploadForm($id)
     {
-        return view('file-upload');
+        $assignment_id = $id;
+        return view('file-upload', compact('assignment_id'));
     }
  
     public function store(Request $request)
     {
+
         $request->validate([
             'file' => 'required|mimes:pdf,xlxs,xlx,docx,doc,csv,txt,png,gif,jpg,jpeg|max:2048',
         ]);
@@ -36,15 +40,17 @@ class UploadFileController extends Controller
         // Perform the database operation here
         Doc::create([
             'file_name' => $fileName,
+            'assignment_id'=> $request->get('assignment_id'),
+            'student_id' => Auth::id(),
         ]);
  
         return back()
             ->with('success','File has been successfully uploaded.');
     }
     
-    public function show()
+    public function show($id)
     {
-        $docs = Doc::get();
+        $docs = Doc::where('assignment_id',  $id)->get();
         return view('showfile',compact('docs'));
     }
 }

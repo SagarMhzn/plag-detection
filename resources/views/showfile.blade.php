@@ -11,8 +11,8 @@
         
             @foreach($docs as $doc)
                 <div>
-                    <a href="{{$doc->upload_file}}" download="{{$doc->file_name}}">Filename : {{$doc->file_name}}</a>
-
+                    {{ $doc->student->name }}
+                    <a href="{{$doc->upload_file}}" download="file">Filename : {{$doc->file_name}}</a>
                 </div>
             @endforeach   
 </body>

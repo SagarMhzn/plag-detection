@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-   <head>
-      <title> File Upload</title>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-   </head>
-   <body>
+@extends('layouts.app')
+
+@section('content')
       <div class="container">
          <div class="panel panel-primary">
             <div class="panel-heading">
@@ -35,16 +31,16 @@
                      <div class="col-md-6">
                         <input type="file" name="file" class="form-control"/>
                      </div>
+                     <input type="hidden" name="assignment_id" value="{{ $assignment_id }}">
                      <div class="col-md-6">
                         <button type="submit" class="btn btn-success">Upload File...</button>
                      </div>
                   </div>
                </form>
                <div>
-                  <a href="{{route('show.file')}}">Show</a>
+                  {{-- <a href="{{route('show.file')}}">Show</a> --}}
                </div>
             </div>
          </div>
       </div>
-   </body>
-</html>
+@endsection
