@@ -43,7 +43,7 @@
                     
                         <ul class="navbar-nav">
                           <li class="nav-item active">
-                            <a class="nav-link" href="{{ route('home') }}">Dashboard </a>
+                            <a class="nav-link" href="{{ route('checkrole') }}">Dashboard </a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="{{ route('studentlist') }}">Members</a>
