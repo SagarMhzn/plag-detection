@@ -53,4 +53,6 @@ class UploadFileController extends Controller
         $docs = Doc::where('assignment_id',  $id)->get();
         return view('showfile',compact('docs'));
     }
+
+    
 }

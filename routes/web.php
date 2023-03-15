@@ -48,6 +48,6 @@ Route::get('upload/{id}', [ UploadFileController::class, 'getFileUploadForm' ])-
 Route::post('file-upload', [ UploadFileController::class, 'store' ])->name('store.file');
 
 Route::get('show-submitted-assignment/{id}', [ UploadFileController::class, 'show' ])->name('show.file');
-
+Route::get('show-student-assignment', [ StudentController::class, 'show' ])->name('student.file');
 
 Route::post('/store-assignment', [AssignmentController::class, 'storeAssignment'])->name('store.assignment');

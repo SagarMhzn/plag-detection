@@ -12,6 +12,7 @@
                 <p class="card-text">{{ $assignment->desc }}</p>
             </div>
             <a href="{{ route('show.file', ['id'=>$assignment->id]) }}" class="btn btn-success">Show Assignments</a>
+            
         </div>
         @endforeach
 

@@ -29,9 +29,23 @@
                         <a href="{{ route('pending_assignments') }}">View pending Assignments</a>
                     </div>
 
+                    <div class="assignment-history card">
+                        {{-- assignment posts shown here --}}
+                        @foreach ($recents as $recent)
+                        <div class="card-body">
+                            <h5 class="card-title">{{$recent->title}}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{$recent->submission_date}}</h6>
+                            <p class="card-text">{{$recent->desc}}</p>
+                        </div>
+                        @endforeach
+                    </div>
+
+                    <a href="{{ route('student.file') }}">Show the file </a>
+                    
                     
                     
                 </div>
+
             
         </div>
     </div>

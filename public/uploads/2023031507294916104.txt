@@ -1,0 +1,1 @@
+This is a PHP script that returns an associative array. The array maps file extensions to arrays of MIME types. The file extensions 'doc' and 'docx' are defined as keys in the array, with their respective values being arrays of MIME types.

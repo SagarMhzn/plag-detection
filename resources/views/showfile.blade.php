@@ -8,6 +8,7 @@
             <div>
                 {{ $doc->student->name }}
                 <a href="{{ $doc->upload_file }}" download="file">Filename : {{ $doc->file_name }}</a>
+                <button class="btn btn-primary">Compare</button>
             </div>
         @endforeach
     </div>
