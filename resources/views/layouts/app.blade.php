@@ -96,4 +96,51 @@
         </main>
     </div>
 </body>
+<script>
+    const userAction = async () => {
+        const response = await fetch('http://localhost:8080/upload_training-file%27);
+        const myJson = await response.json();
+        console.log(myJson);
+
+
+
+        //extract JSON from the http response
+        // do something with myJson
+    }
+</script>
+<script>
+    async function handleFileSelect(evt) {
+        let files = evt.target.files; // FileList object
+
+        // use the 1st file from the list
+        let f = files[0];
+
+        let formData = new FormData();
+        formData.append('file', f);
+
+        try {
+            let response = await fetch('http://localhost:8080/upload_training-file', {
+                method: 'post',
+                body: formData
+            });
+            let data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.error(error);
+        }
+
+
+    // await fetch('http://localhost:8080/upload_training-file', {
+    //         method: 'post',
+    //         body: formData
+
+    //     }).then(res => {
+    //         //handle response
+    //         console.log(res.json());
+    //     })
+
+    }
+
+    document.getElementById('upload').addEventListener('change', handleFileSelect);
+</script>
 </html>
