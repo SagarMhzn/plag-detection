@@ -29,9 +29,9 @@
                   @csrf
                   <div class="row">
                      <div class="col-md-6">
-                        <input type="file" name="file" class="form-control"/>
+                        <input type="file" name="file" class="form-control" id="upload"/>
                      </div>
-                     <input type="hidden" name="assignment_id" id="upload" value="{{ $assignment_id }}">
+                     <input type="hidden" name="assignment_id"  value="{{ $assignment_id }}">
                      <div class="col-md-6">
                         <button type="submit" class="btn btn-success">Upload File...</button>
                      </div>

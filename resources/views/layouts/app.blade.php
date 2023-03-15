@@ -98,7 +98,7 @@
 </body>
 <script>
     const userAction = async () => {
-        const response = await fetch('http://localhost:8080/upload_training-file%27);
+        const response = await fetch('http://localhost:8080/upload_training-file%27');
         const myJson = await response.json();
         console.log(myJson);
 
@@ -126,7 +126,7 @@
             let data = await response.json();
             console.log(data);
         } catch (error) {
-            console.error(error);
+            console.log(error);
         }
 
 
