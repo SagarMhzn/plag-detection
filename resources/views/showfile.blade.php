@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>File Show</h1>
+        <h1>Showing Submitted Files for :  </h1>
 
         <table class="table">
             <thead>

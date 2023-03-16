@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>File Show</h1>
+        <h1>Showing Submitted Assignments by {{ Auth::user()->name }}:</h1>
 
 
         <table class="table">

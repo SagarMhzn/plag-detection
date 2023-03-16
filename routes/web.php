@@ -37,7 +37,8 @@ Route::get('/pending', [AssignmentController::class, 'PendingAssignments'])->nam
 
 Route::get('/student-pending', [AssignmentController::class, 'studentPendingAssignments'])->name('pending_assignments');
 
-Route::get('/list',[MemberController::class,'display'])->name('studentlist');
+Route::get('/list',[MemberController::class,'student_display'])->name('studentlist');
+// Route::get('/list',[MemberController::class,'teacher_display'])->name('teacherlist');
 
 //Route::get('file-upload', [ FileUploadController::class, 'getFileUploadForm' ])->name('get.fileupload');
 //Route::post('file-upload', [ FileUploadController::class, 'store' ])->name('store.file');
