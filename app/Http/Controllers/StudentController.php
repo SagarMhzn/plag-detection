@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Assignment;
 use App\Models\Doc;
+use Illuminate\Support\Facades\Auth;
 
 class StudentController extends Controller
 {
@@ -23,7 +24,7 @@ class StudentController extends Controller
     // }
     public function show()
     {
-        $datas = Doc::all();
+        $datas = Doc::where('student_id',Auth::user()->id)->get();
         return view('showstudent',['showfile' =>$datas]);
     }
     

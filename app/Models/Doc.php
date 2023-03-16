@@ -20,4 +20,9 @@ class Doc extends Model
         return $this->belongsTo(User::class, 'student_id');
     }
 
+    public function assignment()
+    {
+        return $this->belongsTo(Assignment::class, 'assignment_id');
+    }
+
 }

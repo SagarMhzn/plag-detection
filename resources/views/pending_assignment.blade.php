@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         @foreach ($pending_assignments as $assignment)
-        <div class="assignment-history card">
+        <div class="assignment-history card" style="padding-bottom: 5px">
             {{-- assignment posts shown here --}}
             <div class="card-body">
                 <h5 class="card-title">{{ $assignment->title }}</h5>

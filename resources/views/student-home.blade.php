@@ -23,10 +23,10 @@
 
                     <br/>
 
-                    <div class="assignment-class card-body card" style="width:30%">
+                    <div class="assignment-class card-body card" style="width:30% ; margin-bottom: 5px">
                         {{ __('View your pending Assignments!') }}
                         <br/>
-                        <a href="{{ route('pending_assignments') }}">View pending Assignments</a>
+                        <a href="{{ route('pending_assignments') }}">View</a>
                     </div>
 
                     <div class="assignment-history card">
