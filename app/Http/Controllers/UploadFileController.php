@@ -54,5 +54,7 @@ class UploadFileController extends Controller
         return view('showfile',compact('docs'));
     }
 
+    // public function retrieve_files()
+
     
 }

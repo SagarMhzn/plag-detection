@@ -10,7 +10,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Submitted By</th>
                     <th scope="col">Assignments</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,8 +25,10 @@
                         @endphp
                         <td>{{ $i }}</td>
                         <td>{{ $doc->student->name }}</td>
-                        <td><a href="{{ $doc->upload_file }}" download="file">Filename : {{ $doc->file_name }}</a></td>
-                        <td><button class="btn btn-primary">Compare</button></td>
+                        <td>Filename : {{ $doc->file_name }}</td>
+                        <td><button class="btn btn-outline-primary"><a href="{{ $doc->upload_file }}" download="file">Download</a></button>
+                        <button class="btn btn-outline-primary" id="compare">Compare</button></td>
+                        
 
                     </tr>
                 @endforeach

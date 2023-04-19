@@ -16,7 +16,7 @@
 
                     <div class="card" style="margin-bottom:10px">
                         <div class="card-body">
-                            <h5 class="card-title">Subject: </h5>
+                            {{-- <h5 class="card-title">Subject: </h5> --}}
                             <h6 class="card-subtitle mb-2 text-muted">Teacher name: </h6>
                         </div>
                     </div>

@@ -33,8 +33,10 @@
                      </div>
                      <input type="hidden" name="assignment_id"  value="{{ $assignment_id }}">
                      <div class="col-md-6">
-                        <button type="submit" class="btn btn-success">Upload File...</button>
+                        <button type="submit" class="btn btn-success" id="dis_button">Upload File...</button>
+                        <p id="error_msg"></p>
                      </div>
+                      
                   </div>
                </form>
                <div>

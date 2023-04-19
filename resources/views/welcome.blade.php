@@ -397,7 +397,7 @@
         @if (Route::has('login'))
             <div class="hidden px-6 py-4 sm:block">
                 @auth
-                    <a href="{{ url('/home') }}" class=" text-gray-700 dark:text-gray-500 underline">Home</a>
+                    <a href="{{ url('/checkrole') }}" class=" text-gray-700 dark:text-gray-500 underline">Home</a>
                 @else
                 <div class="card-body">
                     <div class="imgcontainer" style="text-align: center;  margin: 24px 0 12px 0;">

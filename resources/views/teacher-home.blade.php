@@ -9,7 +9,7 @@
                 @if (session('successMessage'))
                     <div class="alert alert-success alert-dismissible fade show m-3" role="alert">
                         {{ session('successMessage') }}
-                        <button type="submit" class="close btn btn-danger" data-dismiss="alert" aria-label="Close">
+                        <button type="submit" class="close btn btn-sucess" data-dismiss="alert" aria-label="Close">
                             X
                         </button>
                     </div>
@@ -24,8 +24,8 @@
 
                     <div class="card" style="">
                         <div class="card-body">
-                            <h5 class="card-title">Subject: </h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Teacher name: </h6>
+                            {{-- <h5 class="card-title">Subject: </h5> --}}
+                            <h6 class="card-subtitle mb-2 text-muted">Teacher name: {{ $teacher_name }} </h6>
                         </div>
                     </div>
 

@@ -118,6 +118,8 @@
         </main>
     </div>
 </body>
+
+
 <script>
     const userAction = async () => {
         const response = await fetch('http://localhost:8080/upload_training-file%27');
@@ -130,7 +132,7 @@
         // do something with myJson
     }
 </script>
-<script>
+{{-- <script>
     async function handleFileSelect(evt) {
         let files = evt.target.files; // FileList object
 
@@ -146,7 +148,57 @@
                 body: formData
             });
             let data = await response.json();
+            // localStorage.setItem('plagairism', data.Similarity);
             console.log(data);
+
+        } catch (error) {
+            console.log(error);
+        }
+
+
+        // await fetch('http://localhost:8080/upload_training-file', {
+        //         method: 'post',
+        //         body: formData
+
+        //     }).then(res => {
+        //         //handle response
+        //         console.log(res.json());
+        //     })
+
+    }
+
+    document.getElementById('upload').addEventListener('change', handleFileSelect);
+</script> --}}
+
+
+<script>
+    async function handleFileSelect(evt) {
+        let files = evt.target.files; // FileList object
+
+        // use the 1st file from the list
+        let f = files[0];
+
+        let formData = new FormData();
+        formData.append('file', f);
+
+        try {
+            let response = await fetch('http://localhost:8081/upload_testing-file', {
+                method: 'post',
+                body: formData
+            });
+            let data = await response.json();
+            localStorage.setItem('plagairism', data.Similarity);
+            console.log(data);
+
+            if(data.Similarity >20 ){
+                document.querySelector('#dis_button').disabled = true;
+                document.getElementById('error_msg').innerHTML="Plagiarism is "+data.Similarity+"%. It must be less than 20%"
+            }
+            else{
+                
+                document.getElementById('error_msg').innerHTML="Plagiarism is "+data.Similarity+"%."
+            }
+
         } catch (error) {
             console.log(error);
         }

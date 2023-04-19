@@ -30,7 +30,7 @@
                             <td>{{ Auth::user()->name }}</td>
                             {{-- <h4>{{ $show->assignment->title }} --}}
                             {{-- <h4>{{ $show->file_name }}</h4> --}}
-                            <td>{{ Auth::user()->name . $show->assignment->title }}</td>
+                            <td>{{ $show->assignment->title }}</td>
                             <td><button class="btn-outline-primary">
                                 <a href="{{ $show->upload_file }}"download="{{ Auth::user()->name . $show->assignment->title }}"
                                     style="text-decoration:none;">Download</a>

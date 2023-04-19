@@ -12,8 +12,12 @@ class StudentController extends Controller
     public function index()
     {
         $data = Assignment::orderBy('created_at', 'DESC')->take(1)->get();
-       
+        // $teacher_name = Assignment::where('student_id',Auth::user()->id)->get();
+
+
         return view('student-home',['recents' =>$data]);
+
+        
     }
 
     // public function showstudent()
