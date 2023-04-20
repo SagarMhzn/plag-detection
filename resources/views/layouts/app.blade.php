@@ -182,7 +182,7 @@
         formData.append('file', f);
 
         try {
-            let response = await fetch('http://localhost:8081/upload_testing-file', {
+            let response = await fetch('http://localhost:8080/upload_testing-file', {
                 method: 'post',
                 body: formData
             });
@@ -190,13 +190,17 @@
             localStorage.setItem('plagairism', data.Similarity);
             console.log(data);
 
+
+
             if(data.Similarity >20 ){
                 document.querySelector('#dis_button').disabled = true;
-                document.getElementById('error_msg').innerHTML="Plagiarism is "+data.Similarity+"%. It must be less than 20%"
+
+                let str1 = "Plagiarism detected at "+data.Similarity+"%. It must be less than 20%. Please review your Document and try again!"
+                document.getElementById('error_msg').innerHTML=str1.fontcolor("red")
             }
             else{
-                
-                document.getElementById('error_msg').innerHTML="Plagiarism is "+data.Similarity+"%."
+                let str2 = "Plagiarism detected at "+data.Similarity+"%. You can submit your file!"
+                document.getElementById('error_msg').innerHTML=str2.fontcolor("green")
             }
 
         } catch (error) {

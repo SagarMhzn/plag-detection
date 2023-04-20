@@ -30,11 +30,12 @@
                   <div class="row">
                      <div class="col-md-6">
                         <input type="file" name="file" class="form-control" id="upload"/>
+                        <p id="error_msg"></p>
                      </div>
                      <input type="hidden" name="assignment_id"  value="{{ $assignment_id }}">
                      <div class="col-md-6">
                         <button type="submit" class="btn btn-success" id="dis_button">Upload File...</button>
-                        <p id="error_msg"></p>
+                        
                      </div>
                       
                   </div>

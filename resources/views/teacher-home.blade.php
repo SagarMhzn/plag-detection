@@ -83,6 +83,9 @@
                                                             <span class="input-group-text">Description</span>
                                                             <textarea required class="form-control" name="desc" aria-label="With textarea"></textarea>
                                                         </div>
+
+
+                                                        
                                                         <input type="hidden" name="teacher_id" value="{{ Auth::id() }}">
                                                 </div>
                                                 <div class="modal-footer">
