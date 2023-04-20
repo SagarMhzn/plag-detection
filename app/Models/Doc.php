@@ -9,7 +9,7 @@ class Doc extends Model
 {
     use HasFactory;
     protected $table='docs';
-    protected $fillable = ['file_name', 'student_id', 'assignment_id'];
+    protected $fillable = ['file_name', 'student_id', 'assignment_id','plag_result'];
     protected $appends = ['upload_file'];
     public function getUploadFileAttribute(){
         return asset('uploads/')."/".$this->file_name;

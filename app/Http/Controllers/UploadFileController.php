@@ -26,7 +26,7 @@ class UploadFileController extends Controller
  
     public function store(Request $request)
     {
-
+        
         $request->validate([
             'file' => 'required|mimes:pdf,xlxs,xlx,docx,doc,csv,txt,png,gif,jpg,jpeg|max:2048',
         ]);
@@ -42,6 +42,7 @@ class UploadFileController extends Controller
             'file_name' => $fileName,
             'assignment_id'=> $request->get('assignment_id'),
             'student_id' => Auth::id(),
+            'plag_result'=>$request->get('plag_result'),
         ]);
  
         return back()
@@ -51,6 +52,7 @@ class UploadFileController extends Controller
     public function show($id)
     {
         $docs = Doc::where('assignment_id',  $id)->get();
+        
         return view('showfile',compact('docs'));
     }
 

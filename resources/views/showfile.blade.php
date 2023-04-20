@@ -11,6 +11,7 @@
                     <th scope="col">Submitted By</th>
                     <th scope="col">Assignments</th>
                     <th scope="col">Action</th>
+                    <th scope="col">Plagiarism</th>
                 </tr>
             </thead>
             <tbody>
@@ -26,8 +27,8 @@
                         <td>{{ $i }}</td>
                         <td>{{ $doc->student->name }}</td>
                         <td>Filename : {{ $doc->file_name }}</td>
-                        <td><button class="btn btn-outline-primary"><a href="{{ $doc->upload_file }}" download="file">Download</a></button>
-                        <button class="btn btn-outline-primary" id="compare">Compare</button></td>
+                        <td><button class="btn btn-outline-primary"><a href="{{ $doc->upload_file }}" download="file">Download</a></button></td>
+                        <td>{{$doc->plag_result  }}</td>
                         
 
                     </tr>

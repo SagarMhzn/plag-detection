@@ -122,7 +122,7 @@
 
 <script>
     const userAction = async () => {
-        const response = await fetch('http://localhost:8080/upload_training-file%27');
+        const response = await fetch('http://localhost:8082/upload_training-file%27');
         const myJson = await response.json();
         console.log(myJson);
 
@@ -182,13 +182,17 @@
         formData.append('file', f);
 
         try {
-            let response = await fetch('http://localhost:8080/upload_testing-file', {
+            let response = await fetch('http://localhost:8082/upload_testing-file', {
                 method: 'post',
                 body: formData
             });
             let data = await response.json();
             localStorage.setItem('plagairism', data.Similarity);
-            console.log(data);
+            var plag = localStorage.getItem('plagairism');
+
+            document.getElementById('plag_result').value=plag;
+
+            console.log(plag);
 
 
 

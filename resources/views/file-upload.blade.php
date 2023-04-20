@@ -28,6 +28,8 @@
                <form action="{{ route('store.file') }}" method="POST" enctype="multipart/form-data">
                   @csrf
                   <div class="row">
+                     <input type="hidden" name="plag_result" id="plag_result"/>
+
                      <div class="col-md-6">
                         <input type="file" name="file" class="form-control" id="upload"/>
                         <p id="error_msg"></p>
