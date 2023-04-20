@@ -7,13 +7,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use SebastianBergmann\Type\NullType;
 
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-    const STUDENT = 1;
+    const STUDENT = Null;
     const TEACHER = 2;
-    const ADMIN = 3;
+    
 
     /**
      * The attributes that are mass assignable.
