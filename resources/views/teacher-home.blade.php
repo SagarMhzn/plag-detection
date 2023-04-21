@@ -73,7 +73,7 @@
                                                                 aria-describedby="basic-addon2" />
                                                         </div>
                                                         <div class="input-sub_date mb-3">
-                                                            <label for="submission_date">Choose the Submission Date
+                                                            <label for="submission_date">Choose the Deadline
                                                                 :-</label>
                                                             <input required type="date" name="submission_date"
                                                                 id="submission_date" name="birthday" class="form-control" />
@@ -83,7 +83,11 @@
                                                             <span class="input-group-text">Description</span>
                                                             <textarea required class="form-control" name="desc" aria-label="With textarea"></textarea>
                                                         </div>
-
+                                                        
+                                                        <div class="col-md-6">
+                                                            <input type="file" name="file" class="form-control" id="upload_training_file"/>
+                                                            <p id="error_msg"></p>
+                                                         </div>
 
                                                         
                                                         <input type="hidden" name="teacher_id" value="{{ Auth::id() }}">

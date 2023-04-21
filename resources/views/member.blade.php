@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Members list</h1>
+    
 
     {{-- <table class="table">
         <thead>
@@ -23,25 +23,29 @@
         </tbody>
     </table> --}}
 
-    <table class="table">
-        <thead>
+    <div class="members-table container">
+        <h1>Members list</h1>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            @foreach ($studentlists as $key => $studentlist)
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
+    
+                <td>{{ $key + 1 }}</td>
+                <td>{{ $studentlist['name'] }}</td>
+    
             </tr>
-        </thead>
-        <tbody>
-
-        @foreach ($studentlists as $key => $studentlist)
-        <tr>
-
-            <td>{{ $key + 1 }}</td>
-            <td>{{ $studentlist['name'] }}</td>
-
-        </tr>
-    @endforeach
-        </tbody>
-    </table>
+        @endforeach
+            </tbody>
+        </table>
+    </div>
 
 
     {{-- <table border="2">

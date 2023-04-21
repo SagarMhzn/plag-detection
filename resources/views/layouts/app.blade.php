@@ -132,7 +132,7 @@
         // do something with myJson
     }
 </script>
-{{-- <script>
+<script>
     async function handleFileSelect(evt) {
         let files = evt.target.files; // FileList object
 
@@ -167,8 +167,8 @@
 
     }
 
-    document.getElementById('upload').addEventListener('change', handleFileSelect);
-</script> --}}
+    document.getElementById('upload_training_file').addEventListener('change', handleFileSelect);
+</script>
 
 
 <script>
@@ -196,13 +196,13 @@
 
 
 
-            if(data.Similarity >20 ){
+            if(data.Similarity >40 && data.Similarity<=100 ){
                 document.querySelector('#dis_button').disabled = true;
 
-                let str1 = "Plagiarism detected at "+data.Similarity+"%. It must be less than 20%. Please review your Document and try again!"
+                let str1 = "Plagiarism detected at "+data.Similarity+"%. It must be less than 40%. Please review your Document and try again!"
                 document.getElementById('error_msg').innerHTML=str1.fontcolor("red")
             }
-            else{
+            else if(data.Similarity<40){
                 let str2 = "Plagiarism detected at "+data.Similarity+"%. You can submit your file!"
                 document.getElementById('error_msg').innerHTML=str2.fontcolor("green")
             }

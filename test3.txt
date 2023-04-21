@@ -1,0 +1,43 @@
+A person on a horse jumps over a broken down airplane.	A person is at a diner, ordering an omelette.	0
+A person on a horse jumps over a broken down airplane.	A person is outdoors, on a horse.	1
+Children smiling and waving at camera	There are children present	1
+Children smiling and waving at camera	The kids are frowning	0
+A boy is jumping on skateboard in the middle of a red bridge.	The boy skates down the sidewalk.	0
+A boy is jumping on skateboard in the middle of a red bridge.	The boy does a skateboarding trick.	1
+An older man sits with his orange juice at a small table in a coffee shop while employees in bright colored shirts smile in the background.	A boy flips a burger.	0
+Two blond women are hugging one another.	The women are sleeping.	0
+Two blond women are hugging one another.	There are women showing affection.	1
+A few people in a restaurant setting, one of them is drinking orange juice.	The people are sitting at desks in school.	0
+A few people in a restaurant setting, one of them is drinking orange juice.	The diners are at a restaurant.	1
+An older man is drinking orange juice at a restaurant.	A man is drinking juice.	1
+An older man is drinking orange juice at a restaurant.	Two women are at a restaurant drinking wine.	0
+A man with blond-hair, and a brown shirt drinking out of a public water fountain.	A blond man wearing a brown shirt is reading a book on a bench in the park	0
+A man with blond-hair, and a brown shirt drinking out of a public water fountain.	A blond man drinking water from a fountain.	1
+Two women who just had lunch hugging and saying goodbye.	The friends scowl at each other over a full dinner table.	0
+Two women who just had lunch hugging and saying goodbye.	There are two woman in this picture.	1
+Two women, holding food carryout containers, hug.	Two groups of rival gang members flipped each other off.	0
+Two women, holding food carryout containers, hug.	Two women hug each other.	1
+A Little League team tries to catch a runner sliding into a base in an afternoon game.	A team is trying to tag a runner out.	1
+A Little League team tries to catch a runner sliding into a base in an afternoon game.	A team is playing baseball on Saturn.	0
+The school is having a special event in order to show the american culture on how other cultures are dealt with in parties.	A school hosts a basketball game.	0
+The school is having a special event in order to show the american culture on how other cultures are dealt with in parties.	A school is hosting an event.	1
+High fashion ladies wait outside a tram beside a crowd of people in the city.	The women do not care what clothes they wear.	0
+High fashion ladies wait outside a tram beside a crowd of people in the city.	Women are waiting by a tram.	1
+A man, woman, and child enjoying themselves on a beach.	A family of three is at the beach.	1
+A man, woman, and child enjoying themselves on a beach.	A family of three is at the mall shopping.	0
+People waiting to get on a train or just getting off.	There are people just getting on a train	1
+People waiting to get on a train or just getting off.	There are people waiting on a train.	1
+A couple playing with a little boy on the beach.	A couple are playing with a young child outside.	1
+A couple playing with a little boy on the beach.	A couple watch a little girl play by herself on the beach.	0
+A couple play in the tide with their young son.	The family is sitting down for dinner.	0
+A couple play in the tide with their young son.	The family is outside.	1
+A man and a woman cross the street in front of a pizza and gyro restaurant.	The people are standing still on the curb.	0
+A man and a woman cross the street in front of a pizza and gyro restaurant.	Near a couple of restaurants, two people walk across the street.	1
+A woman in a green jacket and hood over her head looking towards a valley.	The woman is nake.	0
+A woman in a green jacket and hood over her head looking towards a valley.	The woman is wearing green.	1
+Woman in white in foreground and a man slightly behind walking with a sign for John's Pizza and Gyro in the background.	They are protesting outside the capital.	0
+Woman in white in foreground and a man slightly behind walking with a sign for John's Pizza and Gyro in the background.	A woman in white.	1
+Woman in white in foreground and a man slightly behind walking with a sign for John's Pizza and Gyro in the background.	A man is advertising for a restaurant.	1
+Woman in white in foreground and a man slightly behind walking with a sign for John's Pizza and Gyro in the background.	The woman is wearing black.	0
+Woman in white in foreground and a man slightly behind walking with a sign for John's Pizza and Gyro in the background.	The woman is wearing white.	1
+Woman in white in foreground and a man slightly behind walking with a sign for John's Pizza and Gyro in the background.	Olympic swimming.	0

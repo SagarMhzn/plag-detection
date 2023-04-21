@@ -28,7 +28,7 @@
                         <td>{{ $doc->student->name }}</td>
                         <td>Filename : {{ $doc->file_name }}</td>
                         <td><button class="btn btn-outline-primary"><a href="{{ $doc->upload_file }}" download="file">Download</a></button></td>
-                        <td>{{$doc->plag_result  }}</td>
+                        <td>{{$doc->plag_result}}%</td>
                         
 
                     </tr>
